@@ -7,13 +7,13 @@ import { TouchableOpacity } from 'react-native'
 export default function Figura({ vetor, posicao, clicado }) {
   const getIcon = () => {
     if (vetor [posicao] !== 0) {
-      return vetor[posicao] ? "drop" : "cup";
+      return vetor[posicao] ? "cross" : "circle";
     }
     return "pencil";
   };
   return (
     <TouchableOpacity onPress={clicado}>
-        <Entypo name={getIcon()} size={80} color="#000" />
+        <Entypo name={getIcon()} size={100} color="#000" />
     </TouchableOpacity>
   )
 }
